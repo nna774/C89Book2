@@ -21,7 +21,7 @@ Pietの自動生成を行いたいと思った次第です。
 今回一度ぐらいサークル参加をしてみたいとコミケに初申し込みしてみたら、
 運良く当選したのでこの本を書いている次第です。
 
-前回のコミケ(C88)でも同じようなペーパを出したので(https://nna774.net/piet/)、
+前回のコミケ(C88)でも同じようなペーパを出したので(\url{https://nna774.net/piet/})、
 それの続きのような感じです。
 前回のペーパは二日目のアース・スター作品のゾーンに割り当てられた友人のサークルにて配布したのですが、
 完全にアウェーな中でも何枚か配ることに成功しました。
@@ -38,17 +38,17 @@ KMCの部誌の記事としてこの本を出さなかった意味はあるの�
 Pietそのものについての解説もすべきな気がするのですが、
 ここでは概要を説明するに留めます。
 
-Pietについてより詳しくは公式サイト(http://www.dangermouse.net/esoteric/piet.html)を見るなり、
-うちの部員の書いたスライド(http://www.slideshare.net/KMC\_JP/piet-46068527)を参照するなどお願いします。
+Pietについてより詳しくは公式サイト(\url{http://www.dangermouse.net/esoteric/piet.html})を見るなり、
+うちの部員の書いたスライド(\url{http://www.slideshare.net/KMC\_JP/piet-46068527})を参照するなどお願いします。
 
 また、このスライドに書かれているPietのエディタですが、
-現在OSSになっていてhttps://github.com/kndama/Pidetから入手可能となっています。
+現在OSSになっていて\url{https://github.com/kndama/Pidet}から入手可能となっています。
 Pietを触ってみよう という方はこれを使うか、
-とりあえず試してみるだけならPietDev(http://www.rapapaing.com/blog/?page\_id=6)を利用するのが良いと思います。
+とりあえず試してみるだけならPietDev(\url{http://www.rapapaing.com/blog/?page\_id=6})を利用するのが良いと思います。
 
 あとこれはPietに関係ないのですが、
 上記のスライドに出てくるUnambiSweeperですが、
-現在作者によりアンドロイドアプリとしてリリースもされているので(https://play.google.com/store/apps/details?id=jp.nobody.dnek.unambisweeper)、
+現在作者によりアンドロイドアプリとしてリリースもされているので(\url{https://play.google.com/store/apps/details?id=jp.nobody.dnek.unambisweeper})、
 ぜひダウンロードして見てあげてください(宣伝)。
 
 \subsubsection{言語仕様の概要}
@@ -98,7 +98,7 @@ DP、CCを変更して新たな移動先を探し、DPとCCの4通りx2通りの
 
 勿論いままでにもPietの自動生成をしている人がいます。
 
-\subsubsection{http://www.matthias-ernst.eu/pietbrainfuck.html}
+\subsubsection{\url{http://www.matthias-ernst.eu/pietbrainfuck.html}}
 
 基本的にはBrainf*ckインタプリタ。
 Brainf*ckからPietへの変換もできるようなもの。
@@ -110,11 +110,11 @@ Brainf*ckからPietへの変換もできるようなもの。
 高速にインタプリタの部分の小型化が行われました。
 頭がおかしいと思います(褒めています)。
 
-\subsubsection{http://www.toothycat.net/wiki/wiki.pl?MoonShadow/Piet}
+\subsubsection{\url{http://www.toothycat.net/wiki/wiki.pl?MoonShadow/Piet}}
 
 C-likeなコードからアセンブリlike なコードに変換でき、 そのアセンブリlike
 なコードからPietへと変換ができる。
-ソースコードは読めるがPerlで書かれていたのであまりちゃんと読んでいない\ldots{}\ldots{}。
+ソースコードは読めるがPerlで書かれていたのであまりちゃんと読んでいない……。
 
 生成されたコードを見ている限り、 メインとなるコードと、
 そこからジャンプするサブルーチンの列を作るような感じになっているらしい。
@@ -124,7 +124,7 @@ C-likeなコードからアセンブリlike なコードに変換でき、 そ�
 現状の私のコードはPietの擬似命令からPietへの変換を提供しているだけなので、
 もう少し高級な言語から擬似命令への変換を行えるようなものを作りたいと考えていますが現状特に実装はありません。
 
-\subsubsection{https://jefworks.github.io/mondrian-generator/}
+\subsubsection{\url{https://jefworks.github.io/mondrian-generator/}}
 
 これは今回先行のものを探していた時に見つけたのですが、
 \texttt{Pietの自動生成} です。 あんまり関係ないのですが、
@@ -134,7 +134,7 @@ Pietの元ネタとなったピエト・モンドリアンの絵のようなも�
 
 \subsection{前回とのDiff}
 
-前回のペーパー(https://nna774.net/piet/c88paper.pdf)の時点からの簡単なdiffを書いておきます。
+前回のペーパー(\url{https://nna774.net/piet/c88paper.pdf})の時点からの簡単なdiffを書いておきます。
 詳しくは現在の状態を後述するつもりなのでそちらをご覧ください。
 
 一つ目の大きな変更として前回のペーパーの時点では7x7のサイズのタイルを並べてコードを生成していましたが、
@@ -188,7 +188,7 @@ Pointer命令はスタックのトップの値を見て、
 これで分岐することには成功したので、
 適当なところに合流したいと思います。
 
-\href{https://gyazo.com/4f893a8b1a52e2de3f9bd70338ebb9b8}{\includegraphics[width=\textwidth]{images/4f893a8b1a52e2de3f9bd70338ebb9b8.png}} \\
+\href{https://gyazo.com/4f893a8b1a52e2de3f9bd70338ebb9b8}{\includegraphics{images/4f893a8b1a52e2de3f9bd70338ebb9b8.png}} \\
 このような構造でプログラムカウンタが下から来た場合と左から来た場合に合流してともに右に流すことができるので、
 ここに飛んで来るジャンプのようなものが書けて、
 あとはすぐにわかる構造で、以下の様な後ろ向きへの条件付きジャンプができます。
