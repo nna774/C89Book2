@@ -560,10 +560,10 @@ DLLを呼び出すための引数リスト\\\textbf{例}
   Roll {[}``user32.dll'',``MessageBoxA'', ``vssui'', {[}{[}{]},``Hello
   World.'',``Caption'',0{]}{]}\\C製Dllであるuser32.dllの,MessageBoxA関数を呼び出します.
   ``vssui''というのは的確にDLLを扱う為の型情報の宣言です.
-  引数の型は前から順に void\emph{(HANDLE),char}(LPSTR),
-  char\emph{(LPSTR),unsigned int (UINT) で,
+  引数の型は前から順に void*(HANDLE),char(LPSTR),
+  char*(LPSTR),unsigned int (UINT) で,
   返り値はint型にするという宣言で,
-  前から順にvoid},char\emph{,char},unsigned int,intなので 頭文字をとって
+  前から順にvoid*,char*,char*,unsigned int,intなので 頭文字をとって
   ``vssui''です.
 \item
   Roll
