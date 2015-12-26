@@ -10,6 +10,17 @@
 \usepackage{hyperref}
 \usepackage{pdfpages}
 
+\usepackage{listings}
+\lstset{%
+  backgroundcolor={\color[gray]{.85}},%
+  basicstyle={\small},%
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},%
+  lineskip=-0.5ex%
+}
+\usepackage{verbatim}
+
 % myjapanese.sty
 \RequirePackage{xltxtra}
 \def\en#1{{\engrm#1}} % 欧文フォントで出力
@@ -48,5 +59,30 @@
 \input{murata}
 
 \input{atogaki}
+
+\null\vfill
+\section*{奥付}
+\hrule\vskip.5mm\hrule\vskip3mm
+\begin{tabular}{ll}
+  2015/12/31 & 初版発行\\
+  hash: & \href{}{hoge}(の次)\\
+  著作・発行 & NoNameA 774 (nonamea774@nnn77) \\
+  メールアドレス & \href{mailto:nonamea774@gmail.com}{\nolinkurl{nonamea774@gmail.com}}\\
+  Web & \url{https://nna774.net/}\\
+  Twitter & @nonamea774\\
+  GPG Key & 0x0C3E3AB2\\
+  fingerprint & 674A 287A 21D2 2431 AD8F \\
+  & D328 AEF3 C3C7 0C3E 3AB2
+\end{tabular}
+\vskip3mm\hrule\vskip3mm
+
+表紙のPietはmurataによる"「ああ～心がぴょんぴょんするんじゃ～」と出力するチノちゃん"です。
+\url{https://twitter.com/paradigm_9/status/677612736063258624}にて入手出来ます。
+
+
+%% \newpage
+%% 　
+%% \newpage
+\includepdf{images/KOKORO100_kaisetsu.pdf}
 
 \end{document}

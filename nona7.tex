@@ -191,3 +191,60 @@ Pointer命令はスタックのトップの値を見て、
 
 \url{https://gyazo.com/83ac7efa68410f18a8cfdfa1ba52d2ee}\\
 \href{https://gyazo.com/83ac7efa68410f18a8cfdfa1ba52d2ee}{\includegraphics[width=\textwidth]{images/83ac7efa68410f18a8cfdfa1ba52d2ee.png}}
+
+ここまでくれば、後は必要な物を幾つか用意するだけでどんなプログラムだって書くことが可能です。
+
+幾つか例を上げます。
+
+2つ数字を入力として取りGCDを出すPietです。Cで言うと
+\begin{lstlisting}[frame=single]
+int gcd(int n, int m) {
+  int tmp;
+  if (n < m) return gcd(m, n);
+  tmp = n % m;
+  if (tmp == 0) return m;
+  return gcd(m, tmp);
+}
+main() {
+  int n, m;
+  scanf("%d", &n); scanf("%d", &m);
+  printf("%d", gcd(n, m));
+}
+\end{lstlisting}
+のようなことをしています。
+\begin{lstlisting}[frame=single]
+INN
+DUP
+INN
+DUP
+PUSH 3
+PUSH 1
+ROLL
+GREATER
+JEZ S
+PUSH 2
+PUSH 1
+ROLL
+LABEL S
+# ここでスタックに二つ入っていて、大きいほうが上
+PUSH 2
+PUSH 1
+ROLL
+DUP
+PUSH 3
+PUSH 1
+ROLL
+# 小さい方は使うのでコピー
+MOD
+DUP
+JEZ END
+PUSH 2
+PUSH 1
+ROLL
+JMP S
+LABEL END
+POP
+OUTN
+\end{lstlisting}
+
+\includegraphics[width=\textwidth]{images/6c82e735b7bd782e1f328f3d309c1286.png}
