@@ -581,21 +581,20 @@ Pietの最強のIDEであるPidetがC\#製なので
 Piet++のIDE,実行ファイルもC\#製です. そのため,内部的にはC\#で処理します.
 型の相互変換表は下のようになります.
 
-\textbar{} Pietでの型 \textbar{} Cでの型 \textbar{} Cでの別名 \textbar{}
-C\#での型\textbar{}
-\textbar{}:-\textbar{}-\textbar{}-\textbar{}-\textbar{} \textbar{}
-Number \textbar{} int,long \textbar{} INT,LONG,BOOL\textbar{}int
-\textbar{} \textbar{} Number \textbar{} unsigned int,unsigned long
-\textbar{} UINT,DWORD,ULONG \textbar{}uint\textbar{} \textbar{} Number
-\textbar{} unsigned char\textbar{} BYTE \textbar{}byte\textbar{}
-\textbar{} Number \textbar{} char \textbar{} CHAR
-\textbar{}char\textbar{} \textbar{} Number \textbar{} unsigned short
-\textbar{} WORD \textbar{}ushort\textbar{} \textbar{} Number \textbar{}
-short\textbar{} SHORT\textbar{}short \textbar{} \textbar{} Number
-\textbar{} float\textbar{} FLOAT\textbar{}float \textbar{} \textbar{}
-Stack\textbar{} char* \textbar{} LPSTR,LPWSTR \textbar{}string\textbar{}
-\textbar{} Stack\textbar{} void* \textbar{} HANDLE
-\textbar{}IntPtr\textbar{}
+\begin{table}[htb]
+    \begin{tabular}{llll}
+      Pietでの型 & Cでの型 & Cでの別名 & C\#での型 \\ \hline \hline
+      Number & int,long & INT,LONG,BOOL & int \\
+      Number & unsigned int,unsigned long & UINT,DWORD,ULONG & uint \\
+      Number & unsigned char & BYTE & byte \\
+      Number & char & CHAR &char \\
+      Number & unsigned short & WORD &ushort \\
+      Number & short & SHORT & short \\
+      Number & float & FLOAT & float \\
+      Stack & char* & LPSTR,LPWSTR & string \\
+      Stack & void* & HANDLE & IntPtr
+    \end{tabular}
+\end{table}
 
 \section{実装}
 
