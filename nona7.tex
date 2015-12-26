@@ -1,6 +1,6 @@
-\section{Pietの自動生成}
+\chapter[Pietの自動生成]{Pietの自動生成}
 
-\subsection{はじめに}
+\section{はじめに}
 
 こんにちは、NoNameA 774です。
 KMC(京大マイコンクラブ)というPietサークルに入っているのですが、
@@ -21,7 +21,7 @@ KMCの部誌の記事としてこの本を出さなかった意味はあるの�
 今これを読んでる時点ではほぼ手遅れである可能せが高いですがそちらもよろしくお願いします)、
 一度自分のサークルで参加したかったということでよろしくお願いします。
 
-\subsection{前提}
+\section{前提}
 
 今回この記事はプログラミング言語Pietについて書いているので、
 Pietそのものについての解説もすべきな気がするのですが、
@@ -40,7 +40,7 @@ Pietを触ってみよう という方はこれを使うか、
 現在作者によりアンドロイドアプリとしてリリースもされているので(\url{https://play.google.com/store/apps/details?id=jp.nobody.dnek.unambisweeper})、
 ぜひダウンロードして見てあげてください(宣伝)。
 
-\subsubsection{言語仕様の概要}
+\subsection{言語仕様の概要}
 
 Pietは20色の色で絵を描くことによりソースを書きます。
 赤、黄、緑、シアン、青、マゼンタの6色と、
@@ -83,11 +83,11 @@ DP、CCを変更して新たな移動先を探し、DPとCCの4通りx2通りの
 この白ブロックを挟んで色ブロックへ移動した場合に命令を実行しないという性質が良い性質で、
 コード生成はこの性質に大きく頼っています。
 
-\subsection{先行}
+\section{先行}
 
 勿論いままでにもPietの自動生成をしている人がいます。
 
-\subsubsection{\url{http://www.matthias-ernst.eu/pietbrainfuck.html}}
+\subsection{\url{http://www.matthias-ernst.eu/pietbrainfuck.html}}
 
 基本的にはBrainf*ckインタプリタ。
 Brainf*ckからPietへの変換もできるようなもの。
@@ -99,7 +99,7 @@ Brainf*ckからPietへの変換もできるようなもの。
 高速にインタプリタの部分の小型化が行われました。
 頭がおかしいと思います(褒めています)。
 
-\subsubsection{\url{http://www.toothycat.net/wiki/wiki.pl?MoonShadow/Piet}}
+\subsection{\url{http://www.toothycat.net/wiki/wiki.pl?MoonShadow/Piet}}
 
 C-likeなコードからアセンブリlike なコードに変換でき、 そのアセンブリlikeなコードからPietへと変換ができる。
 ソースコードは読めるがPerlで書かれていたのであまりちゃんと読んでいない\dots\dots。
@@ -112,7 +112,7 @@ C-likeなコードからアセンブリlike なコードに変換でき、 そ�
 現状の私のコードはPietの擬似命令からPietへの変換を提供しているだけなので、
 もう少し高級な言語から擬似命令への変換を行えるようなものを作りたいと考えていますが現状特に実装はありません。
 
-\subsubsection{\url{https://jefworks.github.io/mondrian-generator/}}
+\subsection{\url{https://jefworks.github.io/mondrian-generator/}}
 
 これは今回先行のものを探していた時に見つけたのですが、
 \texttt{Pietの自動生成} です。 あんまり関係ないのですが、
@@ -120,7 +120,7 @@ C-likeなコードからアセンブリlike なコードに変換でき、 そ�
 特に書くとこが見つからなかったのでここに書いときます。
 Pietの元ネタとなったピエト・モンドリアンの絵のようなものを生成してくれるページです。
 
-\subsection{前回とのDiff}
+\section{前回とのDiff}
 
 前回のペーパー(\url{https://nna774.net/piet/c88paper.pdf})の時点からの簡単なdiffを書いておきます。
 詳しくは現在の状態を後述するつもりなのでそちらをご覧ください。
@@ -137,7 +137,7 @@ max(ジャンプの間にまたぐgoto命令)程度まで縦方向の太さを�
 厳密に可能な中で一番小さい縦幅とはなっていないように思いますが、
 多くの場合で小さくなったので一応良しとしています。
 
-\subsection{Pietの生成}
+\section{Pietの生成}
 
 Pietを手で描いてみましたか？ Pietを描いたことありますか？ ありますよね。
 よかったです。どういうふうに描きましたか？

@@ -1,4 +1,4 @@
-\documentclass[12pt,b6book]{extarticle}
+\documentclass[12pt,b6book]{book}
 
 \usepackage{xltxtra}
 \setmainfont[Ligatures=TeX]{IPAPMincho}
@@ -29,12 +29,19 @@
 
 \begin{document}
 
+\frontmatter
 %% 表紙
 %% \pagenumbering{Alph}
 %%\insertpage{images/KOKORO100.pdf}
 \includepdf{images/KOKORO100.pdf}
 %%\includegraphics[width=\paperwidth]{images/KOKORO100.png}
 %% \addtocounter{ptc}{1} % nande-
+\tableofcontents
+%% \newpage
+%% 　
+%% \newpage
+
+\mainmatter
 
 \input{nona7}
 
