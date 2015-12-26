@@ -1,4 +1,4 @@
-\documentclass[12pt,b5book]{extarticle}
+\documentclass[12pt,b6book]{extarticle}
 
 \usepackage{xltxtra}
 \setmainfont[Ligatures=TeX]{IPAPMincho}
@@ -6,7 +6,7 @@
 \setmonofont{IPAGothic}
 \XeTeXlinebreaklocale "ja"
 \usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage[unicode]{hyperref}
 
 % myjapanese.sty
 \RequirePackage{xltxtra}
@@ -180,6 +180,7 @@ Pietのプログラムカウンタの移動の際のルールとして、
 それを飛び越えて余分な命令を実行させないための白マスで挟んだものを一つの構成単位(私はブロックと呼んでいます)としました。
 最初の左上のブロックで、右へと向かう一直線の命令列ブロックが正しく動くように誘導していく感じです。
 
+\url{https://gyazo.com/783f2ae98363220ed6859c9bd97cb4ff}\\
 \href{https://gyazo.com/783f2ae98363220ed6859c9bd97cb4ff}{\includegraphics[width=\textwidth]{images/783f2ae98363220ed6859c9bd97cb4ff.png}} \\
 赤と青のポッチは接続方向を表すマーカなので、
 本質的には不要なので無視してください。
@@ -197,6 +198,7 @@ Pointer命令はスタックのトップの値を見て、
 その数だけDPを時計回りに回します。
 これを使えば、スタックの先頭が0の時に分岐するようなものが作れます。
 
+\url{https://gyazo.com/3c7bc0cb0dd41680c6b652ef4486b390}\\
 \href{https://gyazo.com/3c7bc0cb0dd41680c6b652ef4486b390}{\includegraphics[width=\textwidth]{images/3c7bc0cb0dd41680c6b652ef4486b390.png}} \\
 スタックの先頭が0以外の時はそのまま直進し、
 0の時は下に分岐します。
@@ -204,11 +206,13 @@ Pointer命令はスタックのトップの値を見て、
 これで分岐することには成功したので、
 適当なところに合流したいと思います。
 
+\url{https://gyazo.com/4f893a8b1a52e2de3f9bd70338ebb9b8}\\
 \href{https://gyazo.com/4f893a8b1a52e2de3f9bd70338ebb9b8}{\includegraphics{images/4f893a8b1a52e2de3f9bd70338ebb9b8.png}} \\
 このような構造でプログラムカウンタが下から来た場合と左から来た場合に合流してともに右に流すことができるので、
 ここに飛んで来るジャンプのようなものが書けて、
 あとはすぐにわかる構造で、以下の様な後ろ向きへの条件付きジャンプができます。
 
+\url{https://gyazo.com/846e9f87a072a65e02e6943e20adc534}\\
 \href{https://gyazo.com/846e9f87a072a65e02e6943e20adc534}{\includegraphics[width=\textwidth]{images/846e9f87a072a65e02e6943e20adc534.png}}
 
 \end{document}
