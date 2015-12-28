@@ -294,3 +294,27 @@ GCD\\
 \includegraphics[width=\textwidth]{images/4a63cd9654933cc75ca74e60f3982241.png}
 
 \section{おわりに}
+
+とまぁだいたいこんな感じでPietの擬似命令の列からPietの画像を生成しています。
+今回はだいぶ実装の詳細は省いたので、
+詳細が知りたい方は\url{https://github.com/nna774/piet-automata}をご覧ください。
+今回書いたことをだいたいそのまま実装して、
+幾つかの最適化をかけたような感じです。
+`/piet' の中にブロックが入っていて、`config.js'にその対応が入っています。
+
+もう少し高級な言語から擬似命令列を生成できるようなものを作りたいと考えてはいるのですが、
+まだ実装はありません。
+
+最後に幾つかこのレポジトリに関連したものを友人が作ってくれたので、
+紹介しておきます。
+
+\begin{itemize}
+\item
+  \url{https://github.com/primenumber/pasxx} 私の擬似命令に拡張命令を追加して、
+  piet-automataで使える列に変換できるものです。
+  サイズが巨大になりがちなので少し厳しいです。
+\item
+  \url{https://github.com/1995hnagamin/pas-interpreter} 擬似命令列をPietに落とさずにそのまま実行できるスクリプトです。
+\end{itemize}
+
+今回初挑戦の拙い文章でしたが、ここまで読んでくださってありがとうございました。
